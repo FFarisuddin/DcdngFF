@@ -26,7 +26,7 @@
        <input type="submit" name="load_data" value="Load Data" />
  </form>
  <?php
-    $host = "server-dbsql";
+    $host = "server-dbsql.database.windows.net";
     $user = "adminff";
     $pass = "AdminAdmin!";
     $db = "db-fajarfarisuddinweb";
