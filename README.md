@@ -1,2 +1,2 @@
-# a83-macd-labs
+# Fajar Farisuddin
 Source code untuk kelas Azure
