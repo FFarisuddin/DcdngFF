@@ -1,11 +1,21 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
-<head>
-    <title>BD & PRM Microsoft</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-</head>
-<body>
- 
+	<head>
+		<title>Dimension by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+
+
 <script type="text/javascript">
     function processImage() {
         // **********************************************
@@ -68,30 +78,62 @@
         });
     };
 </script>
- 
-<h1>AGIT for Microsoft Event 17 December 2019</h1>
-<br>
-<br><br>
 
-<input type="file" accept="image/*" capture="camera">
-    
-Image to analyze:
-<input type="text" name="inputImage" id="inputImage"
-    value=" " />
-<button onclick="processImage()">Analyze image</button>
-<br><br>
-<div id="wrapper" style="width:1020px; display:table;">
-    <div id="jsonOutput" style="width:600px; display:table-cell;">
-        Response:
-        <br><br>
-        <textarea id="responseTextArea" class="UIInput"
-                  style="width:580px; height:400px;"></textarea>
-    </div>
-    <div id="imageDiv" style="width:420px; display:table-cell;">
-        Source image:
-        <br><br>
-        <img id="sourceImage" width="400" />
-    </div>
-</div>
-</body>
+
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<!--<div class="logo">
+							<span class="icon fa-gem"></span>
+						</div>-->
+						<div class="content">
+							<div class="inner">
+								<h1>Image to Analyze</h1>
+								<p><input type="text" name="inputImage" id="inputImage" value=" " /></p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a onclick="processImage()" href="#intro">Magic</a></li>
+								<!--<li><a href="#work">Work</a></li>
+								<li><a href="#about">About</a></li>
+								<li><a href="#contact">Contact</a></li>
+								<li><a href="#elements">Elements</a></li>-->
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Intro -->
+							<article id="intro">
+								<h2 class="major"></h2>
+								<span class="image main"><img id="sourceImage" alt="" /></span>
+								<p><textarea id="responseTextArea" class="UIInput" style="width:560px; height:400px;"></textarea></p>
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; Astra Graphia Information Technology. Design: <a href="https://www.linkedin.com/in/fajar-farisuddin/">FFA</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
