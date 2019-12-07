@@ -142,7 +142,7 @@
                 function take_snapshot() {
                     Webcam.snap( function(data_uri) {
                         $(".image-tag").val(data_uri);
-                        document.getElementById('results').innerHTML = '<img src="'+data_uri+'"/>';
+                        document.getElementById('sourceImage').innerHTML = '<img src="'+data_uri+'"/>';
                     });
 
 
@@ -179,8 +179,6 @@
                     data: '{"url": ' + '"' + data_uri + '"}',
                     })
  
- document.getElementById('sourceImage').innerHTML = '<img src="'+data_uri+'"/>';
-
                     .done(function(data) {
                     // Show formatted JSON on webpage.
                         $("#responseTextArea").val(JSON.stringify(data, null, 2));
