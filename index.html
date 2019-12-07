@@ -179,9 +179,11 @@
                     data: '{"url": ' + '"' + data_uri + '"}',
                     })
  
+ document.getElementById('sourceImage').innerHTML = '<img src="'+data_uri+'"/>';
+
                     .done(function(data) {
                     // Show formatted JSON on webpage.
-                    $("#responseTextArea").val(JSON.stringify(data, null, 2));
+                        $("#responseTextArea").val(JSON.stringify(data, null, 2));
                     })
 
 
