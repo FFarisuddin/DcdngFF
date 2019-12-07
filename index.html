@@ -14,7 +14,23 @@
 	</head>
 	<body class="is-preload">
 
-
+<script>
+ Webcam.set({
+        width: 490,
+        height: 390,
+        image_format: 'jpeg',
+        jpeg_quality: 90
+    });
+  
+    Webcam.attach( '#inner' );
+  
+    function take_snapshot() {
+        Webcam.snap( function(data_uri) {
+            $(".image-tag").val(data_uri);
+            document.getElementById('results').innerHTML = '<img src="'+data_uri+'"/>';
+        } );
+    }
+</script>
 
 <script type="text/javascript">
     function processImage() {
@@ -92,12 +108,14 @@
 						<div class="content">
 							<div class="inner">
 								<h1>Image to Analyze</h1>
-								<p><input type="text" name="inputImage" id="inputImage" value=" " /></p>
-							</div>
+								<!--<p><input type="text" name="inputImage" id="inputImage" value=" " /></p>
+							-->
+                            </div>
 						</div>
 						<nav>
 							<ul>
-								<li><a onclick="processImage()">Magic</a></li>
+								<li><a value="Take Snapshot" onClick="take_snapshot()">Magic</a></li>
+                                <input type="hidden" name="image" class="image-tag">
 							</ul>
 						</nav>
 						<nav>
