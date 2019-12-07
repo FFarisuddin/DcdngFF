@@ -155,6 +155,13 @@
                     var uriBase = "https://computer-visionn.cognitiveservices.azure.com/vision/v2.0/analyze";
 
 
+// Request parameters.
+        var params = {
+            "visualFeatures": "Categories,Description,Color",
+            "details": "",
+            "language": "en",
+        };
+
                      // Make the REST API call.
                     $.ajax({
                     url: uriBase + "?" + $.param(params),
