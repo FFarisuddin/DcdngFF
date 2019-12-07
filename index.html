@@ -22,7 +22,7 @@
         jpeg_quality: 90
     });
   
-    Webcam.attach( '#inner' );
+    Webcam.attach( '#mycamera' );
   
     function take_snapshot() {
         Webcam.snap( function(data_uri) {
@@ -106,7 +106,7 @@
 							<span class="icon fa-gem"></span>
 						</div>-->
 						<div class="content">
-							<div class="inner">
+							<div class="inner" id="mycamera">
 								<h1>Image to Analyze</h1>
 								<!--<p><input type="text" name="inputImage" id="inputImage" value=" " /></p>
 							-->
