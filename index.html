@@ -17,7 +17,7 @@
 	</head>
 	<body class="is-preload">
 
-
+<!--
 
 <script type="text/javascript">
     function processImage() {
@@ -82,7 +82,7 @@
     };
 </script>
 
-
+-->
 
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -130,22 +130,56 @@
 
 
             <script>
- Webcam.set({
-        width: 490,
-        height: 390,
-        image_format: 'jpeg',
-        jpeg_quality: 90
-    });
+                Webcam.set({
+                    width: 490,
+                    height: 390,
+                    image_format: 'jpeg',
+                    jpeg_quality: 90
+                });
   
-    Webcam.attach( '#mycamera' );
+                Webcam.attach( '#mycamera' );
   
-    function take_snapshot() {
-        Webcam.snap( function(data_uri) {
-            $(".image-tag").val(data_uri);
-            document.getElementById('results').innerHTML = '<img src="'+data_uri+'"/>';
-        } );
-    }
-</script>
+                function take_snapshot() {
+                    Webcam.snap( function(data_uri) {
+                        $(".image-tag").val(data_uri);
+                        document.getElementById('results').innerHTML = '<img src="'+data_uri+'"/>';
+                    });
+
+
+
+
+
+                    var subscriptionKey = "ef9e7d8394e24d87a1a08487ce5eca5b";
+ 
+        
+                    var uriBase = "https://computer-visionn.cognitiveservices.azure.com/vision/v2.0/analyze";
+
+
+                     // Make the REST API call.
+                    $.ajax({
+                    url: uriBase + "?" + $.param(params),
+ 
+                    // Request headers.
+                    beforeSend: function(xhrObj){
+                        xhrObj.setRequestHeader("Content-Type","application/json");
+                        xhrObj.setRequestHeader(
+                        "Ocp-Apim-Subscription-Key", subscriptionKey);
+                    },
+ 
+                    type: "POST",
+ 
+                    // Request body.
+                    data: '{"url": ' + '"' + data_uri + '"}',
+                    })
+ 
+                    .done(function(data) {
+                    // Show formatted JSON on webpage.
+                    $("#responseTextArea").val(JSON.stringify(data, null, 2));
+                    })
+
+
+                }
+            </script>
 
 	</body>
 </html>
