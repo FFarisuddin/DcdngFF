@@ -1,4 +1,4 @@
-<?php
+<!--<?php
     require_once 'vendor/autoload.php';
     require_once "./random_string.php";
 
@@ -23,7 +23,7 @@
     $listBlobsOptions->setPrefix("");
     $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
 ?>
-
+-->
 <!DOCTYPE html>
 <html>
 <head>
